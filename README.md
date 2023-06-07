@@ -21,6 +21,7 @@ namespace GabrielDias {
         public string Name { get; set; } = "Gabriel Dias";
         public string Username { get; set; } = "GabrielMataDias";
         public string Location { get; set; } = "SP - Brazil";
+        public string Linkedin { get; set; } = "linkedin.com/in/gabriel-mata-dias-1a9b18210/"
 
         public override string ToString() {
             return Name;
