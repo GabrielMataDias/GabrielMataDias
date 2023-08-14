@@ -9,25 +9,37 @@
 ```csharp
 using System;
 
-namespace GabrielDias {
-    class Program {
-        static void Main(string[] args) {
-            var me = new GabrielDias();
+namespace GabrielDias
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var me = new User
+            {
+                Name = "Gabriel Dias",
+                Username = "GabrielMataDias",
+                Location = "SP - Brazil",
+                Linkedin = "linkedin.com/in/gabriel-mata-dias-1a9b18210/"
+            };
             Console.WriteLine(me);
         }
     }
 
-    class GabrielDias {
-        public string Name { get; set; } = "Gabriel Dias";
-        public string Username { get; set; } = "GabrielMataDias";
-        public string Location { get; set; } = "SP - Brazil";
-        public string Linkedin { get; set; } = "linkedin.com/in/gabriel-mata-dias-1a9b18210/"
+    class User
+    {
+        public string Name { get; set; }
+        public string Username { get; set; }
+        public string Location { get; set; }
+        public string Linkedin { get; set; }
 
-        public override string ToString() {
-            return Name;
+        public override string ToString()
+        {
+            return $"Name: {Name}\nUsername: {Username}\nLocation: {Location}\nLinkedIn: {Linkedin}";
         }
     }
 }
+
 ```
 
 <p align="center">
