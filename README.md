@@ -9,37 +9,34 @@
 ```csharp
 using System;
 
-namespace GabrielDias
+namespace GabrielDias;
+
+public static class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            var me = new User
-            {
-                Name = "Gabriel Dias",
-                Username = "GabrielMataDias",
-                Location = "SP - Brazil",
-                Linkedin = "linkedin.com/in/gabriel-mata-dias-1a9b18210/"
-            };
-            Console.WriteLine(me);
-        }
-    }
+        var me = new User(Name: "Gabriel Dias",
+                          Username: "GabrielMataDias",
+                          Location: "SP - Brazil",
+                          LinkedIn: "linkedin.com/in/gabriel-mata-dias-1a9b18210/");
 
-    class User
-    {
-        public string Name { get; set; }
-        public string Username { get; set; }
-        public string Location { get; set; }
-        public string Linkedin { get; set; }
-
-        public override string ToString()
-        {
-            return $"Name: {Name}\nUsername: {Username}\nLocation: {Location}\nLinkedIn: {Linkedin}";
-        }
+        Console.WriteLine(me);
     }
 }
 
+public readonly record struct User(string Name,
+                                   string Username,
+                                   string Location,
+                                   string LinkedIn)
+{
+    public override string ToString()
+        => $"Name: {Name}" +
+           $"\nUsername: {Username}" +
+           $"\nLocation: {Location}" +
+           $"\nLinkedIn: {LinkedIn}";
+
+
+}
 ```
 
 <p align="center">
